@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript">
+      var popupWindow = window.open(
+        chrome.extension.getURL("normal_popup.html"),
+        "exampleName",
+        "width=400,height=400"
+      );
+      window.close();
+    </script>
+  </head>
+  <body>
+    <style>
+      .container {
+        max-height: 600px;
+        min-height: 300px;
+        width: 250px;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
+        background: white;
+      }
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+      .patient-list {
+        max-height: 250px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+    </style>
+    <div class="container">
+      <div class="page-header">
+        <h3>Fake or Not</h3>
+        <p id="status"></p>
+      </div>
+      <div class="form-group">
+        <h6>statuses count</h6>
+        <input class="form-control" type="text" id="text0" />
+        <h6>followers count</h6>
+        <input class="form-control" type="text" id="text1" />
+        <h6>friends count</h6>
+        <input class="form-control" type="text" id="text2" />
+        <h6>favourites count</h6>
+        <input class="form-control" type="text" id="text3" />
+        <h6>listed count</h6>
+        <input class="form-control" type="text" id="text4" />
+        <h6>sex code</h6>
+        <input class="form-control" type="text" id="text5" />
+        <h6>lang code</h6>
+        <input class="form-control" type="text" id="text6" />
+      </div>
+      <div>
+        <a href="http://127.0.0.1:5000/" target="_blank">Predict</a>
+
+        <button class="btn btn-primary" id="changelinks">Change</button>
+      </div>
+    </div>
+    <script src="/scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="/scripts/extension.js" type="text/javascript"></script>
+  </body>
+</html>
