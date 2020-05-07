@@ -8,7 +8,9 @@
         "default_popup": "popup.html",
         "default_title": "ForR"
     },
-
+    "icons": { "16": "images/icons8-fraud-48.png",
+           "48": "images/icons8-fraud-48.png",
+          "128": "images/icons8-fraud-96.png" },
     "permissions": [
         "<all_urls>","activeTab","webNavigation","http://localhost/*"
     ],

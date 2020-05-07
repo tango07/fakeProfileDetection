@@ -28,24 +28,31 @@
         overflow-x: hidden;
         max-width: 100%;
       }
+      #fake{
+      color:red;
+       font-weight:bold;
+      }
+      #real{
+      color:green;
+      font-weight:bold;
+      }
     </style>
 
   </head>
   <body>
   <div class="container">
-
-        <h3>Fake or Not</h3>
-          <form action="index" method="post">
-      <h6>statuses count</h6>
-      <input class="form-control" type="text" id="text0" />
-      <h6>followers count</h6>
-      <input class="form-control" type="text" id="text1" />
-      <h6>friends count</h6>
-      <input class="form-control" type="text" id="text2" />
-      <h6>favourites count</h6>
-      <input class="form-control" type="text" id="text3" />
-      <h6>listed count</h6>
-      <input class="form-control" type="text" id="text4" />
+      <h3><span id="fake">FAKE</span> or <span id="real">REAL</span></h3>
+      <form action="index" method="post">
+      <h6>Number of Statuses </h6>
+      <input class="form-control" type="number" min="0" id="text0" required />
+      <h6>Number of Followers </h6>
+      <input class="form-control" type="number" min="0" id="text1" required/>
+      <h6>Number of Friends</h6>
+      <input class="form-control" type="number" min="0" id="text2" required/>
+      <h6>Number of Favourites </h6>
+      <input class="form-control" type="number" min="0" id="text3" required/>
+      <h6>How many have added to a list?</h6>
+      <input class="form-control" type="number" min="0" id="text4" required/>
 
       <h6 >Gender</h6>
               <select class="form-control" id="text5" name="gender" >
@@ -56,12 +63,12 @@
                   <option value="0">Unkown</option>
               </select>
 
-      <h6>lang code</h6>
-      <input class="form-control" type="text" id="text6" />
+      <h6>Language used</h6>
+      <input class="form-control" type="number" min="0" id="text6" required/>
       <br>
       <button type="button" id="btn-post" class="btn btn-primary">Predict</button>
                 <script src="/scripts/extension.js" type="text/javascript"></script>
-        <br>
+        <br><br>
       <div id="result"></div>
     </form>
   </div>
