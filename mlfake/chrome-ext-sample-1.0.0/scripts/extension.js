@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             result.innerHTML = this.responseText;
             alert("The Profile is "+this.responseText)
           } else {
-            result.innerHTML = "error";
+            result.innerHTML = "Predicting.....";
           }
         }
         if(document.getElementById('text0').validity.valid &&document.getElementById('text1').validity.valid &&

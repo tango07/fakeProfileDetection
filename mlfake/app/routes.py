@@ -13,16 +13,6 @@ def index():
         int_features_values = [int(data) for data in features_values]
         list_int_features_values =[int_features_values]
         output = Predict().prediction(list_int_features_values)
-        # print(int_features_values)
-        # statuses = int(request.form["statuses"])
-        # friends = int(request.form["friends"])
-        # favourites = int(request.form["favourites"])
-        # listed = int(request.form["listed"])
-        # statuses = int(request.form["statuses"])
-        # sex = int(request.form["sex"])
-        # lang = int(request.form["lang"])
-        # name = request.form["foo"]
-        # lorem = request.form["lorem"]
         print(output)
         return output
     return "some error occured!!!"
