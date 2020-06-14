@@ -1,7 +1,7 @@
 from flask import request, render_template, Flask
-# from app import app
 from app.model import Predict
 app = Flask(__name__)
+
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -15,7 +15,7 @@ def index():
         output = Predict().prediction(list_int_features_values)
         print(output)
         return output
-    return "some error occured!!!"
+    return "some error occured!"
 
 
 # @app.route('/')
